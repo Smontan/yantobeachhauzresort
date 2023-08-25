@@ -1,0 +1,215 @@
+/* @import "~intl-tel-input/build/css/intlTelInput.css"; */
+
+/* IMAGE GALLERY DESIGN-1 */
+.gallery-layout1 {
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-areas:
+        "pic1 pic1 pic1 pic1"
+        "pic2 pic3 pic4 pic5";
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-layout1 > div {
+    /* border: 2px solid #000; */
+    overflow: hidden;
+}
+
+.gallery-layout1 > div > img {
+    object-fit: cover;
+}
+
+.gallery-layout1 > div:first-child {
+    grid-area: pic1;
+    height: 320px;
+}
+
+@media screen and (min-width: 640px) {
+    .gallery-layout1 {
+        grid-template-areas:
+            "pic1 pic2"
+            "pic1 pic3"
+            "pic1 pic4"
+            "pic1 pic5";
+        grid-template-columns: 1fr 25%;
+        grid-template-rows: 100px 100px 100px 100px;
+    }
+
+    .gallery-layout1 > div:first-child {
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .gallery-layout1 {
+        grid-template-areas:
+            "pic1 pic2 pic3"
+            "pic1 pic4 pic5";
+        grid-template-columns: 1fr 20% 20%;
+        grid-template-rows: 200px 200px;
+    }
+}
+/* IMAGE GALLERY DESIGN-1 */
+.gallery-layout2 {
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-areas:
+        "pic1 pic1"
+        "pic2 pic3";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 160px;
+}
+
+/* IMAGE GALLERY DESIGN-2 */
+.gallery-layout2 > div {
+    /* border: 2px solid #000; */
+    overflow: hidden;
+}
+
+.gallery-layout2 > div > img {
+    object-fit: cover;
+}
+
+.gallery-layout2 > div:first-child {
+    grid-area: pic1;
+    height: 320px;
+}
+
+@media screen and (min-width: 768px) {
+    .gallery-layout2 {
+        grid-template-areas:
+            "pic1 pic2"
+            "pic1 pic3";
+        grid-template-columns: 1fr 160px;
+        grid-template-rows: 160px 160px;
+    }
+
+    .gallery-layout2 > div:first-child {
+        height: 100%;
+    }
+}
+
+/* TABLE CUSTOM CSS */
+.set-width {
+    max-width: 336px;
+}
+
+.concat div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Lists */
+ul,
+ol,
+dl {
+    padding-left: 1rem;
+    font-size: 0.875rem;
+}
+
+ul li,
+ol li,
+dl li {
+    line-height: 1.8;
+}
+
+.list-ticked,
+.list-arrow,
+.list-star {
+    list-style: none;
+    padding: 0;
+}
+
+.list-ticked li,
+.list-arrow li,
+.list-star li {
+    padding-left: 1.5rem;
+}
+
+.list-ticked li:before,
+.list-arrow li:before,
+.list-star li:before {
+    font-family: "Material Design Icons";
+    margin-left: -1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.list-ticked li:before {
+    content: "\F12D";
+    color: #ff4747;
+}
+
+.list-arrow li:before {
+    content: "\F142";
+    color: #71c016;
+}
+
+.list-star li:before {
+    content: "\F4CE";
+    color: #ffc100;
+}
+
+/* Star rating */
+.rating-css div {
+    color: #ffe400;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.rating-css input {
+    display: none;
+}
+
+.rating-css input + label {
+    font-size: 60px;
+    text-shadow: 1px 1px 0 #8f8420;
+    cursor: pointer;
+}
+
+.rating-css input:checked + label ~ label {
+    color: #b4afaf;
+}
+.rating-css label:active {
+    transform: scale(0.8);
+    transition: 0.3ease;
+}
+
+.checked {
+    color: #ffe400;
+}
+
+/* Card custom image height for img-top */
+.card-img-top {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+/* International telephone input */
+/* .iti__flag {
+    background-image: url("path/to/flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti__flag {
+        background-image: url("path/to/flags@2x.png");
+    }
+}
+
+.iti { width: 100%; } */
+
+/* .iti__flag {
+    background-image: url("path/to/flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti__flag {
+        background-image: url("path/to/flags@2x.png");
+    }
+} */
