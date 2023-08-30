@@ -58,6 +58,4 @@ jobs:
 
         run: npm install
 
-      - name: Compile assets for production
-
-        run: npm run build
+      
