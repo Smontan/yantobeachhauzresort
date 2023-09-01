@@ -12,6 +12,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: free5.googiehost.com
-        username: yantobeachhauz@yantobeachhauz.whf.bz
-        password: 123456789Ybh!
-        server-dir: /home/yantobe1/domains/yantobeachhauz.whf.bz/
+        username: yantobe1
+        password: Zf.T0w[3Mqk8F4
+        server-dir: /domains/yantobeachhauz.whf.bz/
