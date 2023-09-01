@@ -1,7 +1,7 @@
 on: push
 name: 🚀 Deploy website on push
 jobs:
-  web-deploy:
+  laravel-deployment:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
@@ -13,6 +13,11 @@ jobs:
       
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+    - name: Setup PHP with PECL extension
+      uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
+      with:
+        php-version: "8.1"
 
     - name: Generate key
       run: php artisan key:generate
@@ -35,6 +40,27 @@ jobs:
     - name: Cache the framework bootstrap files
       run: php artisan optimize
 
+    - name: Checkout
+
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+
+      uses: actions/setup-node@v3
+
+      with:
+        node-version: "16"
+
+        check-latest: true
+
+    - name: Install NPM dependencies
+
+      run: npm ci
+
+    - name: Compile assets for production
+
+      run: npm run build
+  
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
