@@ -18,7 +18,7 @@
                     @csrf
                     <label>{{__('Email Address')}}</label>
                     <div class="mb-3">
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" alue="{{ old('email') }}" placeholder="Password" autocomplete="email" aria-label="Password" aria-describedby="password-addon">
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" autocomplete="email" aria-label="Password" aria-describedby="password-addon">
 
                         @error('email')
                             <span class="invalid-feedback" role="alert">
