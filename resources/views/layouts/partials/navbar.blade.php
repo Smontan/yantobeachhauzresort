@@ -3,7 +3,7 @@
     <div class="navbar-brand-wrapper d-flex justify-content-center">
       <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">  
         <a class="navbar-brand brand-logo" href="{{url('admin/dashboard')}}">
-            <img src="images/logo.svg" alt="logo"/>
+            {{-- <img src="images/logo.svg" alt="logo"/> --}}
             <small>Yanto Beach Hauz</small>
         </a>
         <a class="navbar-brand brand-logo-mini" href="{{url('admin/dashboard')}}"><img src="images/logo-mini.svg" alt="logo"/></a>
